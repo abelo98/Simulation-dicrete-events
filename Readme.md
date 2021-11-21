@@ -4,3 +4,4 @@
 - La salida está redirigida hacia un archivo output.txt donde podrá examinar los resultados una vez concluida la simulación.
 -  Versión de Python utilizada: 3.8.10 64 bit.
 -  Bibliotecas empleadas: fractions, numpy, sys.
+-  simulation es un pdf con el resultado de la simulación que se analiza en las recomendaciones.
