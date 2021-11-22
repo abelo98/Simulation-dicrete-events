@@ -5,3 +5,5 @@
 -  Versión de Python utilizada: 3.8.10 64 bit.
 -  Bibliotecas empleadas: fractions, numpy, sys.
 -  simulation es un pdf con el resultado de la simulación que se analiza en las recomendaciones.
+-  El archivo Console.py contiene la lógica de la consola y en Stats.py es donde se analizan los resultados de las simulaciones.
+
