@@ -15,7 +15,13 @@ class Statistics():
 
         print(f'Mean clients waiting more than 5 minutes with only two workers = {m1}')
         print(f'Mean clients waiting more than 5 minutes with {self.extra_workers} extra workers = {m2}')
-        print(f'''Each day around {round(m1-m2)} more clients wait more than 5 minutes when there aren't extra workers''')
+
+        m3 = round(m1-m2)
+        if m3>=0:
+            print(f'''Each day around {m3} more clients wait more than 5 minutes when there aren't extra workers''')
+        else:
+            print(f'''Each day around {-1*m3} more clients wait more than 5 minutes when there are extra workers''')
+
         
 
         print('')
@@ -30,7 +36,11 @@ class Statistics():
         if p3:
             print(f'% of clients attended by {self.extra_workers} extra workers = {p3} %')  
 
-        print(f'''There are {p1-p2} % less of the clients waiting more than 5 mins when employing extra workers.''')
+        p4 = p1-p2
+        if p4>=0:
+            print(f'''There are {p4} % less of the clients waiting more than 5 mins when employing extra workers.''')           
+        else:
+            print(f'''There are {-1*p4} % less of the clients waiting more than 5 mins when not employing extra workers.''')
         print('')
 
     def Data(self):

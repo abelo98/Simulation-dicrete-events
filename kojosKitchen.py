@@ -3,6 +3,7 @@ import sys
 from numpy.random.mtrand import uniform
 from fractions import Fraction
 from Stats import Statistics
+from Console import Show
 
 class Kitchen:
     def __init__(self, extra_workers,lambda_arrive,lambda_rush):
@@ -175,39 +176,9 @@ def main(simulations,extra_workers,arrive_lambda,rush_lambda):
     print(f'Finished simulations. See file:{t}')
 
 if __name__=="__main__":
-
-    while 1:
-        simulations = 1000 
-        workers  = 1
-        arrive_lambda = [1/5,1/9,1/13]
-        rush_lambda = [1/2,1/2,1/2]
-        print('')
-        try:
-            v = input("Enter how many simulations to run: ")
-            simulations = int(v)
-            if simulations < 1: 
-                raise Exception()
-        except:
-            if v == '':
-                pass
-            else:
-                print('waiting a number >= 1')
-                continue
-        try:
-            v = input("Enter how many extra workers for rush hour: ")
-            workers = int(v)
-            if workers < 1: 
-                raise Exception()
-        except:
-            if v == '':
-                pass
-            else:
-                print('waiting a number >= 1')
-                continue
-        print('')
-        break
-
-    main(simulations,workers,arrive_lambda,rush_lambda)
+    c = Show()
+    simulations,workers,la,lr =  c.start()
+    main(simulations,workers,la,lr)
 
 
 
